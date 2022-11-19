@@ -1,9 +1,9 @@
 program main
     implicit none
     INTEGER n
-    DOUBLE PRECISION, PARAMETER:: a = -1.0d0
-    DOUBLE PRECISION, PARAMETER:: b = 1.0d0
-    DOUBLE PRECISION s_daikei
+    double precision, PARAMETER:: a = -1.0d0
+    double precision, PARAMETER:: b = 1.0d0
+    double precision s_daikei
     n = 10
 
     call daikei(n, a, b, s_daikei)
@@ -15,12 +15,12 @@ end program main
 subroutine daikei(n, a, b, s_daikei)
     implicit none
     INTEGER, intent(in) :: n
-    DOUBLE PRECISION, intent(in) :: a, b
-    DOUBLE PRECISION, INTENT(OUT):: s_daikei
-    DOUBLE PRECISION h
-    DOUBLE PRECISION f
+    double precision, intent(in) :: a, b
+    double precision, INTENT(OUT):: s_daikei
+    double precision h
+    double precision f
     INTEGER i
-    DOUBLE PRECISION f1, f2
+    double precision f1, f2
 
     h = (b - a) / DBLE(n)
     s_daikei = 0.0d0
@@ -34,8 +34,8 @@ end subroutine daikei
 
 function f(xin)
     implicit none
-    DOUBLE PRECISION, INTENT(IN):: xin
-    DOUBLE PRECISION f
+    double precision, INTENT(IN):: xin
+    double precision f
 
     f = 2 / (1 + xin ** 2)
 end function f

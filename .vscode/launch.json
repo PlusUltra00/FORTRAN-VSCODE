@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "(gdb) 起動",
+            "name": "build and debug fortran file with gdb",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",

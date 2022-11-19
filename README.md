@@ -4,7 +4,7 @@
 ダウンロードされた**VSCodeSetup-x64-x.xx.x.exe**を実行する．  
 以下Visual Studio CodeをVSCodeと表記する．
 ## 拡張機能のインストール
-Fortran には万能な拡張機能が存在しないため，いくつかの拡張機能をインストールする必要がある．
+Fortran は以前まで複数の拡張機能をインストールしなければならなかったが，現在ではModern Fortranに全てが統合された．
 拡張機能のインストールは画面左の
 
 <img src="./img/extention_icon.png" width=10%>
@@ -16,15 +16,11 @@ Fortran には万能な拡張機能が存在しないため，いくつかの拡
 - VSCode の日本語化
 ### C/C++
 - デバッグ時に使用
-### FORTRAN Intellisence
-- language-serverの利用
-- コードナビゲーション
 ### Modern Fortran
+- Fortran全般の言語機能
 - Syntax highlight
 - snippets
 - lint
-### Fortran breakpoint Support
-- ブレークポイントの設定
 
 ## Pythonのインストール
 [python公式サイト](https://www.python.org/)にアクセスし，**Downloads**から**Windows**を選択し，**Stable Releases**の一番上にあるバージョンから**Download Windows installer** \(64bit\)を選択する．ダウンロードが完了したら，インストーラを起動し，**install now**をクリックする．
@@ -132,7 +128,6 @@ mkdir .vscode
 `settings.json`に以下のように記入．
 ```json
 {
-    "fortran-ls.executablePath": "C:\\{workspace}\\.fortran\\Scripts\\fortls.exe",
     "fortran.fortls.path": "C:\\{workspace}\\.fortran\\Scripts\\fortls.exe"
 }
 ```
